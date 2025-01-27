@@ -46,6 +46,7 @@ st.markdown("Get personalized movie recommendations based on your favorite movie
 selected_movie_name = st.selectbox("🔍 **Search for a Movie:**", movies['title'].values)
 
 if st.button("💡 **Recommend**"):
+    st.markdown("You may also like:")
     names, posters = recommend(selected_movie_name)
     col1, col2, col3, col4, col5, col6 = st.columns(6)
     with col1:
